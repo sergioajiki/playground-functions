@@ -48,7 +48,7 @@ function highestCount(number) {
   let countNumMaior = 0
   for (let index2 = 0; index2 < number.length; index2 += 1) {
     if (number[index2] === numMaior) {
-      countNumMaior++
+      countNumMaior += 1
     }
   }
   return countNumMaior
@@ -56,9 +56,22 @@ function highestCount(number) {
 // console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
+ if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+  return `os gatos trombam e o rato foge` 
+ } else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return `cat1`;
+ }  else {
+    return `cat2`;
+ }
 }
+
+// console.log(catAndMouse(1, 1, 6));
+// console.log(catAndMouse(1, 1, 1));
+// console.log(catAndMouse(10, 12, 8));
+
+
 
 // Desafio 8
 function fizzBuzz() {
