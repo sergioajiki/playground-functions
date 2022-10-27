@@ -1,17 +1,28 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(para1, para2) {
   // seu código aqui
+  if (para1 && para2) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  return base * height / 2;
+
   // seu código aqui
 }
 
+
 // Desafio 3
-function splitSentence() {
+function splitSentence(Frase) {
   // seu código aqui
+  return Frase.split(' ');
+
 }
+// console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
 function concatName() {
