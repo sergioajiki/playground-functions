@@ -34,20 +34,18 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(number) {
   let numMaior = number[0];
-  for (let index = 0; index < number.length; index += 1) {
-    if (number[index] >= numMaior) {
-      numMaior = number[index];
-    }
-  }
   let countNumMaior = 0;
-  for (let index2 = 0; index2 < number.length; index2 += 1) {
-    if (number[index2] === numMaior) {
-      countNumMaior += 1;
+  for (let index = 0; index < number.length; index += 1) {
+    if (number[index] > numMaior) {
+      numMaior = number[index];
+      countNumMaior = 0
     }
-  }
+    if (number[index] === numMaior) 
+      countNumMaior += 1
+    }
   return countNumMaior;
 }
-// console.log(highestCount([0, 0, 0]));
+// console.log(highestCount([0, 4, 4, 4, 3, 2, 1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -137,7 +135,8 @@ function techList(array, string) {
   for (let index = 0; index < array.length; index += 1) {
     techName = { tech: arrayOrdenada[index], name: string };
     resultado.push(techName);
-  } return resultado;
+  } 
+  return resultado;
 }
 // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 // console.log(techList(null, 'lucas'));
