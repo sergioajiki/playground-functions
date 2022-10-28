@@ -1,11 +1,12 @@
 // Desafio 1
 function compareTrue(para1, para2) {
-  if (para1 && para2) {
-    return true;
-  } else {
-    return false;
-  }
-}
+return para1 && return para2
+  //   if (para1 && para2) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
 // Desafio 2
 function calcArea(base, height) {
@@ -125,23 +126,33 @@ function decode(string2) {
 // console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
 // console.log(decode('g4 Tryb2!'));
 
-
-
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  if (array === null || array.length === 0 || string === null) {
+    return 'Vazio!';
+  } else {
+    let arrayOrdenada = array.sort()
+    let techName = {}
+    let resultado = []
+    for (let index = 0; index < array.length; index += 1) {
+      techName = { "tech": arrayOrdenada[index], "name": string };
+      resultado.push(techName)
+    } return resultado
+  }
 }
+  console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+  console.log(techList(null, 'lucas'));
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  highestCount,
-  splitSentence,
-  techList,
-};
+  module.exports = {
+    calcArea,
+    catAndMouse,
+    compareTrue,
+    concatName,
+    decode,
+    encode,
+    fizzBuzz,
+    footballPoints,
+    highestCount,
+    splitSentence,
+    techList,
+  };
