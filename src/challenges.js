@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(para1, para2) {
-  return para1 && para2 ? true : false;
+  return para1 && para2
   //   if (para1 && para2) {
   //   return true;
   // } else {
