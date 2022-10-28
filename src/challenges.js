@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(para1, para2) {
-return  para1 && para2 ? true : false;
+  return para1 && para2 ? true : false;
   //   if (para1 && para2) {
   //   return true;
   // } else {
@@ -53,11 +53,12 @@ function highestCount(number) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
     return 'os gatos trombam e o rato foge';
-  } else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    return 'cat1';
-  } 
-    return 'cat2';
   }
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return 'cat1';
+  }
+  return 'cat2';
+}
 // console.log(catAndMouse(1, 1, 6));
 // console.log(catAndMouse(1, 1, 1));
 // console.log(catAndMouse(10, 12, 8));
@@ -127,30 +128,30 @@ function decode(string2) {
 
 // Desafio 10
 function techList(array, string) {
-  if (array === null || array.length === 0 || string === null) {
-    return 'Vazio!';
-  } 
-    let arrayOrdenada = array.sort();
-    let techName = {};
-    let resultado = [];
-    for (let index = 0; index < array.length; index += 1) {
-      techName = { 'tech': arrayOrdenada[index], 'name': string };
-      resultado.push(techName);
-    } return resultado;
-  }
-  // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
-  // console.log(techList(null, 'lucas'));
+if (array === null || array.length === 0 || string === null) {
+  return 'Vazio!';
+}
+let arrayOrdenada = array.sort();
+let techName = {};
+let resultado = [];
+for (let index = 0; index < array.length; index += 1) {
+  techName = { tech: arrayOrdenada[index], name: string };
+  resultado.push(techName);
+} return resultado;
+}
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+// console.log(techList(null, 'lucas'));
 
-  module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    highestCount,
-    splitSentence,
-    techList,
-  };
+module.exports = {
+calcArea,
+catAndMouse,
+compareTrue,
+concatName,
+decode,
+encode,
+fizzBuzz,
+footballPoints,
+highestCount,
+splitSentence,
+techList,
+};
