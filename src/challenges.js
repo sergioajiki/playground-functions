@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(para1, para2) {
-  return para1 && para2
+  return para1 && para2;
   //   if (para1 && para2) {
   //   return true;
   // } else {
@@ -38,11 +38,12 @@ function highestCount(number) {
   for (let index = 0; index < number.length; index += 1) {
     if (number[index] > numMaior) {
       numMaior = number[index];
-      countNumMaior = 0
+      countNumMaior = 0;
     }
-    if (number[index] === numMaior) 
-      countNumMaior += 1
+    if (number[index] === numMaior) {
+      countNumMaior += 1;
     }
+  }
   return countNumMaior;
 }
 // console.log(highestCount([0, 4, 4, 4, 3, 2, 1]));
@@ -135,7 +136,7 @@ function techList(array, string) {
   for (let index = 0; index < array.length; index += 1) {
     techName = { tech: arrayOrdenada[index], name: string };
     resultado.push(techName);
-  } 
+  }
   return resultado;
 }
 // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
