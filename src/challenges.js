@@ -1,12 +1,11 @@
 // Desafio 1
 function compareTrue(para1, para2) {
-return para1 && return para2
-  //   if (para1 && para2) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+    if (para1 && para2) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -140,8 +139,8 @@ function techList(array, string) {
     } return resultado
   }
 }
-  console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
-  console.log(techList(null, 'lucas'));
+  // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+  // console.log(techList(null, 'lucas'));
 
   module.exports = {
     calcArea,
