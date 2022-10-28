@@ -1,29 +1,29 @@
 // Desafio 11
-function generatePhoneNumber(array) {
+// function generatePhoneNumber(array) {
   // if (array.length !== 11) {
   //   return 'Array com tamanho incorreto';
   // }  
-  let numeros = {};
-  for (let index = 0; index < array.length; index += 1) {
-    if (numeros[array[index]] =
-      // if (array[index] === numeros[index])
-      //   numeros[index] += 1;
-      console.log(numeros);
-    // return numeros;
-  }
-  //if (array[])
-  //
-  return numeros
-  // console.log(numeros[2])
-}
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+//   let numeros = {};
+//   for (let index = 0; index < array.length; index += 1) {
+//     if (numeros[array[index]] =
+//       // if (array[index] === numeros[index])
+//       //   numeros[index] += 1;
+//       console.log(numeros);
+//     // return numeros;
+//   }
+//   //if (array[])
+//   //
+//   return numeros
+//   // console.log(numeros[2])
+// }
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
-let x = {
-  1: 1,
-  2: 1
-}
-x[3] = 9
-console.log(x)
+// let x = {
+//   1: 1,
+//   2: 1
+// }
+// x[3] = 9
+// console.log(x)
 
 
 // }
@@ -58,9 +58,9 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
 }
 
-console.log(triangleCheck(10, 14, 8));
-console.log(triangleCheck(10, 14, 100));
-console.log(triangleCheck(100, 14, 8));
+// console.log(triangleCheck(10, 14, 8));
+// console.log(triangleCheck(10, 0, 0));
+// console.log(triangleCheck(100, 14, 8));
 
 //   a < b + c
 //   a > b - c
