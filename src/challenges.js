@@ -128,30 +128,30 @@ function decode(string2) {
 
 // Desafio 10
 function techList(array, string) {
-if (array === null || array.length === 0 || string === null) {
-  return 'Vazio!';
-}
-let arrayOrdenada = array.sort();
-let techName = {};
-let resultado = [];
-for (let index = 0; index < array.length; index += 1) {
-  techName = { tech: arrayOrdenada[index], name: string };
-  resultado.push(techName);
-} return resultado;
+  if (array === null || array.length === 0 || string === null) {
+    return 'Vazio!';
+  }
+  let arrayOrdenada = array.sort();
+  let techName = {};
+  let resultado = [];
+  for (let index = 0; index < array.length; index += 1) {
+    techName = { tech: arrayOrdenada[index], name: string };
+    resultado.push(techName);
+  } return resultado;
 }
 // console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 // console.log(techList(null, 'lucas'));
 
 module.exports = {
-calcArea,
-catAndMouse,
-compareTrue,
-concatName,
-decode,
-encode,
-fizzBuzz,
-footballPoints,
-highestCount,
-splitSentence,
-techList,
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+  techList,
 };
