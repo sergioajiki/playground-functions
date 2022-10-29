@@ -24,9 +24,9 @@ function hydrate(bebida) {
     total += somaNum[index];
   } if (total === 1) {
     String(total);
-    return total + ' copo de água';
-    }
-    return total + ' copos de água';
+  return total + ' copo de água';
+  }
+  return total + ' copos de água';
 }
 // console.log(hydrate('1 cerveja'));
 // console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
