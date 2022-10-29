@@ -5,7 +5,6 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-
   if (lineA <= lineB && lineA <= lineC) {
     return ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) || ((lineA < (lineB + lineC)) && (lineB < (lineA + lineC)) && (lineC < (lineA + lineB)));
   } else if (lineB <= lineA && lineB <= lineC) {
@@ -19,19 +18,16 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(bebida) {
   let numerosDaString = bebida.replace(/[^0-9]/g, '');
   let somaNum = numerosDaString.split('');
-  let total = 0
+  let total = 0;
   for (let index = 0; index < numerosDaString.length; index += 1) {
     somaNum[index] = parseInt(somaNum[index]);
-    total = total + somaNum[index];
-  } 
-  if (total === 1) {
-    return (String(total) + ' copo de água');
-  } else {
-    return (String(total) + ' copos de água');
-  }
-
+    total += somaNum[index];
+  } if (total === 1) {
+    String(total);
+    return total + ' copo de água';
+    }
+    return total + ' copos de água';
 }
-
 // console.log(hydrate('1 cerveja'));
 // console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 // console.log(hydrate('7 copos de água, 3 copos de água'));
