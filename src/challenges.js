@@ -64,19 +64,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let resultado = [];
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      resultado[index] = 'fizzBuzz';
+      numbers[index] = 'fizzBuzz';
     } else if (numbers[index] % 3 === 0) {
-      resultado[index] = 'fizz';
+      numbers[index] = 'fizz';
     } else if (numbers[index] % 5 === 0) {
-      resultado[index] = 'buzz';
+      numbers[index] = 'buzz';
     } else {
-      resultado[index] = 'bug!';
+      numbers[index] = 'bug!';
     }
   }
-  return resultado;
+  return numbers;
 }
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
