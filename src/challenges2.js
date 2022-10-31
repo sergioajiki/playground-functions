@@ -1,20 +1,38 @@
 // Desafio 11
-function generatePhoneNumber(num) {
+function generatePhoneNumber(num) {  
   if (num.length !== 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
+  let elemento
+  let contaNum
   for (let index = 0; index < num.length; index += 1) {
     if (num[index] < 0 || num[index] > 9) {
+    return 'não é possível gerar um número de telefone com esses valores';
+    }
+    elemento = num[index];
+    contaNum = 0;
+    for (let i = 0; i < num.length; i += 1) {
+      if (elemento === num[i]) {
+        contaNum += 1;
+      }
+    }
+    if (contaNum >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    let ddd = [num[0], num[1]];
-    let fone1 = [num[2], num[3], num[4], num[5], num[6]];
-    let fone2 = [num[7], num[8], num[9], num[10]];
-    return '(' + ddd.join('') + ') ' + fone1.join('') + '-' + fone2.join('');
   }
+  let ddd = [num[0], num[1]];
+  let fone1 = [num[2], num[3], num[4], num[5], num[6]];
+  let fone2 = [num[7], num[8], num[9], num[10]];
+  return '(' + ddd.join('') + ') ' + fone1.join('') + '-' + fone2.join('');
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
+
+// let ddd = [num[0], num[1]];
+// let fone1 = [num[2], num[3], num[4], num[5], num[6]];
+// let fone2 = [num[7], num[8], num[9], num[10]];
+// return '(' + ddd.join('') + ') ' + fone1.join('') + '-' + fone2.join('');
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -38,7 +56,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // console.log(triangleCheck(17, 4, 12));
 // console.log(triangleCheck(3, 5, 10));
 // console.log(triangleCheck(16, 9, 2));
-// console.log(triangleCheck(2, 2, 6));      
+// console.log(triangleCheck(2, 2, 6));
 
 // Desafio 13
 function hydrate(bebida) {
