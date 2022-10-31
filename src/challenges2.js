@@ -15,13 +15,14 @@ function generatePhoneNumber(num) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let ddd = [num[0], num[1]];
-  let fone1 = [num[2], num[3], num[4], num[5], num[6]];
-  let fone2 = [num[7], num[8], num[9], num[10]];
-  return '(' + ddd.join('') + ') ' + fone1.join('') + '-' + fone2.join('');
+  return '(' + num[0] + num[1] + ') ' + num[2] + num[3] + num[4] + num[5] + num[6] + '-' + num[7] + num[8] + num[9] + num[10];
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+// let ddd = [num[0], num[1]];
+// let fone1 = [num[2], num[3], num[4], num[5], num[6]];
+// let fone2 = [num[7], num[8], num[9], num[10]];
+// return '(' + ddd.join('') + ') ' + fone1.join('') + '-' + fone2.join('');
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -70,4 +71,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
