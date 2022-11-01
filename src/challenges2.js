@@ -4,10 +4,9 @@ function generatePhoneNumber(num) {
     return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < num.length; index += 1) {
-    let elemento = num[index];
     let contaNum = 0;
     for (let i = 0; i < num.length; i += 1) {
-      if (elemento === num[i]) {
+      if (num[index] === num[i]) {
         contaNum += 1;
       }
     }
@@ -15,14 +14,25 @@ function generatePhoneNumber(num) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  return '(' + num[0] + num[1] + ') ' + num[2] + num[3] + num[4] + num[5] + num[6] + '-' + num[7] + num[8] + num[9] + num[10];
+  let ddd = [num[0], num[1]];
+  let fone1 = [num[2], num[3], num[4], num[5], num[6]];
+  let fone2 = [num[7], num[8], num[9], num[10]];
+  return `(${ddd.join('')}) ${fone1.join('')}-${fone2.join('')}`;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-// let ddd = [num[0], num[1]];
-// let fone1 = [num[2], num[3], num[4], num[5], num[6]];
-// let fone2 = [num[7], num[8], num[9], num[10]];
-// return '(' + ddd.join('') + ') ' + fone1.join('') + '-' + fone2.join('');
+// if (contaNum >= 3) {
+//   return 'não é possível gerar um número de telefone com esses valores';
+// }
+// if (num[index] < 0) {
+//   return 'não é possível gerar um número de telefone com esses valores';
+// }
+// if (num[index] > 9) {
+//   return 'não é possível gerar um número de telefone com esses valores';
+// }
+// if (contaNum >= 3 || num[index] < 0 || num[index] > 9) {
+//  return 'não é possível gerar um número de telefone com esses valores'
+// }
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -58,9 +68,9 @@ function hydrate(bebida) {
     total += somaNum[index];
   } if (total === 1) {
     String(total);
-    return total + ' copo de água';
+    return `${total} copo de água`;
   }
-  return total + ' copos de água';
+  return `${total} copos de água`;
 }
 // console.log(hydrate('1 cerveja'));
 // console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
