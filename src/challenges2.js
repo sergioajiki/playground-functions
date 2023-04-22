@@ -19,19 +19,8 @@ function generatePhoneNumber(num) {
   let fone2 = [num[7], num[8], num[9], num[10]];
   return `(${ddd.join('')}) ${fone1.join('')}-${fone2.join('')}`;
 }
-// if (contaNum >= 3) {
-//   return 'não é possível gerar um número de telefone com esses valores';
-// }
-// if (num[index] < 0) {
-//   return 'não é possível gerar um número de telefone com esses valores';
-// }
-// if (num[index] > 9) {
-//   return 'não é possível gerar um número de telefone com esses valores';
-// }
-// if (contaNum >= 3 || num[index] < 0 || num[index] > 9) {
-//  return 'não é possível gerar um número de telefone com esses valores'
-// }
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
@@ -46,6 +35,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return ((lineC < (lineA + lineB)) && (lineC > Math.abs(lineA - lineB)));
   }
 }
+
 // console.log(triangleCheck(10, 14, 8));
 // console.log(triangleCheck(8, 10, 14));
 // console.log(triangleCheck(8, 10, 140));
